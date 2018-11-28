@@ -1,0 +1,82 @@
+@import url(../../base.less);
+
+// home模块
+.home {
+	.ui-btn(@bg, @color) {
+		background: @bg;
+		color: @color;
+		margin: 30px auto 20px;
+		border: 1px solid @color;
+		font-size: 18px;
+		padding: 12px 26px;
+		&:hover {
+			background: @color;
+			color: @bg;
+		}
+	}
+	text-align: center;
+	.banner {
+		padding: 80px 0 100px;
+		background: @color;
+		color: #fff;
+		.logo {
+			.wcenter(120px, 0, 30px);
+			font-size: 100px;
+			height: 120px;
+			line-height: 120px;
+			border-radius: 10px;
+			border: 1px solid #fff;
+		} 
+		h1 {
+			.wcenter(800px);
+			font-size: 30px;
+			line-height: 48px;
+		}
+		.btn {
+			.ui-btn(@color, #fff);
+		}
+		p {
+			color: lighten(@color, 20%);
+		}
+	}
+	.first-part {
+		padding: 100px 0 80px;
+		border-bottom: 1px solid #ccc;
+		color: #666;
+		h2 {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+		.info {
+			.wcenter(800px);
+			font-size: 21px;
+		}
+		ul li {
+			float: left;
+			width: 1 / 3 * 100%;
+			padding: 10px;
+			img {
+				width: 100%;
+			}
+			p {
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+		.line {
+			.wcenter(100px, 30px);
+			border-top: 1px solid #ccc;
+		}
+		.btn {
+			.ui-btn(#fff, @color);
+		}
+	}
+	// 使用混合复用
+	.second-part {
+		.first-part;
+		ul li {
+			width: 1 / 4 * 100%;
+			padding: 0 1px;
+		}
+	}
+}
