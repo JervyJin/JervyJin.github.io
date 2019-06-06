@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+hr{
+    opacity: 0;
+    height: 30px;
+}
+body{
+    width: 100%;
+    height: auto;
+    font-family:"Microsoft Yahei";   
+}
+section{
+    min-height: 700px;
+}
+.ptitle{
+   
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin:10px;
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+    color: white; 
+    margin:10px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 30px;
+    padding: 50px 10px 0;
+    border-bottom: 2px solid orangered;
+    width: 150px;
+    margin: 0 auto;
+}
+
+h4{
+    text-align: center;
+    color:white;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0;
+}
+p{
+    font-size: 14px;
+    text-align: center;
+}
+.intro{
+    color: gray;   
+}
+/* 响应式部分 */
+@media only screen and (max-width: 415px){
+    #floor1 div.myIntro h1,h2{
+        font-size: 28px;
+        margin: 0 0 50px;
+    }
+    #floor1 div.myIntro button{
+        display: block;
+        margin: 10px auto;
+    }
+}
+/* 全局 */
+.main{
+    width:100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+#floor1{
+    height: 800px;
+}
+.floor1_bg{
+    width: 100%;
+    height: 800px;   
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.myIntro{
+    text-align: center;
+    padding-top: 250px;
+    height: 100%;
+}
+.myIntro h1{
+    -webkit-animation: changecolor 5s ease-in-out infinite;
+}
+.myIntro h2{
+    -webkit-animation: changecolor 5s ease-in-out infinite;
+}
+@-webkit-keyframes changecolor{
+    0%{color: black;}
+    40%{
+        color: white;
+        transform: scale(1.1);
+    }
+    100%{
+        color: black;
+        text-shadow: 10px 10px 5px #888;
+    }
+}
+.floor1_bg img{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top:0;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+}
+.floor1_bg .current{
+    opacity: 0;
+    -webkit-animation: change 5s ease-in-out;
+}
+@-webkit-keyframes change{
+    0%{opacity: 0;}
+    40%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.navbar{
+    background-color: #3c7ec0;
+    z-index: 999;
+}
+.navbar-default .navbar-brand{
+    color: white;
+}
+.navbar-default .navbar-nav > li > a{
+    color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus,
+ .navbar-default .navbar-nav > li > a.active{
+     color:#F1BE62;
+ }
+/* floor1 */
+.floor2_pho #pho1 {
+    width: 140px;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+.floor2_footer a{
+    line-height: 30px;
+    font-size: 18px;
+    padding: 10px;
+    color:black;
+    border-right:1px solid black;
+    cursor: pointer;
+}
+.floor2_footer a:hover{
+    background-color: black;
+    color:white;
+}
+.floor2_footer img{
+    width: 30px;
+    height: 30px;
+}
+/* floor2 */
+#floor3{
+    background-attachment: fixed;
+    background-image: url(images/floor3.jpg);
+}
+.part{
+    margin-top: 50px;
+}
+.part img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.part:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+/* floor3 */
+.bgbox{
+    overflow: hidden;
+}
+.bgbox img{ 
+    width: 100%;
+    height: 255px;
+    -webkit-transition: all 1s ease
+}
+.cover_box{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease-in;
+}
+.cover_text p{
+    text-align: center;
+    opacity: 1;
+    cursor: pointer;
+    margin: 0;
+}
+.cover_text:hover p{
+    color: white;
+    text-decoration: underline;
+}
+.container .bgbox:hover img{
+    transform: scale(1.2);
+}
+.container .bgbox:hover .cover_box{
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    transform: rotate(360deg);
+    -webkit-animation: jump 0.5s linear;
+}
+.container p{
+    margin: 0;
+}
+@-webkit-keyframes jump{
+    0%{height: 0;top:0;}
+    50%{height: 50%;top:220px;}
+    100%{height: 100%;top:0;}
+}
+/* floor4 */
+#floor5{
+    background-attachment: fixed;
+    background-image: url(images/floor5.jpg);
+    height: 700px;
+}
+.circle_html{
+    height: 220px;
+}
+.outerCircle{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin: 0 auto;
+}
+.outerCircle .object{
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    color: orange;
+    font-size: 30px;
+}
+.circle{
+    width: 70px;
+    height: 140px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+.right{
+    right:0;
+}
+.left{
+    left:0;
+}
+.circlein{
+    width: 140px;
+    height: 140px;
+    border:10px solid transparent;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    top:0;
+}
+.inright{
+    border-top:10px solid #787978;
+    border-right:10px solid #787978;
+    right:0;
+    transform: rotate(45deg);
+    -webkit-animation: circleinLoad_right 3s linear;
+}
+.inleft{
+    border-bottom:10px solid #787978;
+    border-left:10px solid #787978;
+    left:0;
+    transform: rotate(-45deg);
+    -webkit-animation: circleinLoad_left 3s linear;
+}
+.cssright{
+    border-top:10px solid #787978;
+    border-right:10px solid #787978;
+    right:0;
+    transform: rotate(45deg);
+    -webkit-animation: circleinLoad_right 3s linear;
+}
+.cssleft{
+    border-bottom:10px solid #787978;
+    border-left:10px solid #787978;
+    left:0;
+    transform: rotate(-65deg);
+    -webkit-animation: circleinLoad_left 3s linear;
+}
+.jqueryright{
+    border-top:10px solid #787978;
+    border-right:10px solid #787978;
+    right:0;
+    transform: rotate(45deg);
+    -webkit-animation: circleinLoad_right 3s linear;
+}
+.jqueryleft{
+    border-bottom:10px solid #787978;
+    border-left:10px solid #787978;
+    left:0;
+    transform: rotate(-5deg);
+    -webkit-animation: circleinLoad_left 3s linear;
+}
+@-webkit-keyframes circleinLoad_right{
+    0%{
+        -webkit-transform: rotate(-135deg);
+    }
+    50%,100%{
+        -webkit-transform: rotate(45deg);
+    }
+}
+@-webkit-keyframes circleinLoad_left{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }  
+}
+/* css3 动画效果 */
+.circle_num{
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+/* floor5 */
+.school_box{
+    height: 150px;
+    position: relative;
+}
+.date{
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+.date p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 30px;
+}
+.ani{
+    height: 100px;
+    overflow: hidden;
+}
+.ani img{
+    width: 100px;
+    -webkit-animation: fly 10s infinite;
+}
+@-webkit-keyframes fly{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: 110%;
+    }   
+}
+.job_box{
+    height: 150px;
+    width: 100%;
+}
+.job{
+    padding-top: 20px;
+}
+.school-job img{
+    width: 100px;
+}
+/* floor6 */
